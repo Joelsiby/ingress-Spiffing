@@ -1,0 +1,641 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+*{
+    margin: 0;
+    padding: 0px;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+    font-family: sans-serif;
+    
+}
+/* ---------------------------------------------------------------------------------------------------- */
+
+
+#startImage .startImage1{
+    background-image: url("../img/photo1.jpg"); /* The image used */
+    background-color: #cccccc; /* Used if the image is unavailable */
+    height: 720px; 
+    background-position: center; /* Center the image */
+    /* background-repeat: no-repeat;  */
+    background-size: cover; 
+    display: flex;
+        
+    
+    
+}
+#startImage .startImage1 h2{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    color: #1D1D1F;
+    text-align: center;
+    font-size: 50px;
+    margin-top: 0px;
+    margin-left: 44%;
+}
+
+#imgShift .container {
+    position: relative;
+    background: #aad5f6;
+}
+#imgShift .slide-1 {
+    background: url('../img/photo1.jpg');
+}
+#imgShift .slide-2 {
+    background: url('../img/photo2.jpg');
+    opacity: 0.7;
+}
+#imgShift .slide-3 {
+    background: url('../img/photo3.jpg');
+}
+#imgShift .slide-4 {
+    background: url('../img/photo4.jpg');
+}
+
+#imgShift .slide {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow-x: hidden;
+}
+#imgShift .caption {
+    background: rgba(0, 0, 0, 0.03);
+    width: 100%;
+    position: absolute;
+    top: 10%;
+    transform: translateY(-50%);
+    padding: 40px 0px;
+}
+
+#imgShift .caption h3 {
+    color: #1D1D1F;
+    text-align: center;
+    font-size: 50px;
+    padding: 18px;
+    /* margin-right: 20%; */
+}
+#imgShift .caption p {
+    max-width: 600px;
+    width: 90%;
+    margin: 0px auto;
+    color: #3bb1ff;
+    text-align: center;
+    font-size: 30px;
+    line-height: 1.5em;
+}
+#imgShift .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 100;
+    background: rgba(0, 0, 0, .1);
+    border-radius: 50%;
+    transform: background 500ms;
+}
+#imgShift .arrow img {
+    width: 50px;
+}
+#imgShift .arrow:hover {
+    background: rgba(0, 0, 0, .4);
+}
+#imgShift .l {
+    left: 0;
+}
+#imgShift .r {
+    right: 0;
+}
+
+
+
+
+/* ---------------------------------------------------------------------------------------------------- */
+
+#gallery { 
+    background-image: url('../img/black.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+
+#gallery .container{
+    /* color: black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    transform-style: preserve-3d;
+    width: 1100px;
+
+}
+#gallery .container .card{
+    position: relative;
+    width: 320px;
+    height: 320px;
+    margin: 20px;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+
+}#gallery .container .card.hide{
+	display: none;
+}
+#gallery .container .card.show{
+	display: block;
+	animation: show .5s ease;
+}
+
+@keyframes show{
+    0%{
+    	opacity:0;
+    	transform: scale(0.9);
+    }
+    100%{
+    	opacity:1;
+    	transform: scale(1);
+    }
+
+}
+#gallery .card .box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: 1s ease;
+}
+#gallery .container .card:hover .box{
+    transform: rotateY(180deg);
+}
+#gallery .container .card .box .imgBx{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+#gallery .container .card .box .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+
+#gallery .container .card .box .contentBox{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #1D1D1F;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    transform: rotateY(180deg);
+    
+    
+}
+#gallery .container .card .box .contentBox div{
+    transform-style: preserve-3d;
+    padding: 20px;
+    background: linear-gradient(45deg,#fe0061,#3bb1ff);
+    transform: translateZ(100px);
+
+}
+#gallery .container .card .box .contentBox div h2{
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+#gallery .container .card .box .contentBox div h2 p{
+    color: #fff;
+    font-size: 16px;
+
+}
+#gallery .container .pagination{
+	width: 100%;
+	float: left;
+	padding:15px;
+	text-align: center;
+}
+#gallery .container .pagination div{
+	display: inline-block;
+	margin:0 10px;
+}
+#gallery .container .pagination .page{
+	color:gray;
+}
+#gallery .container .pagination .prev,#gallery .container .pagination .next{
+ color:white;
+ border:1px solid white;
+ font-size:15px;
+ padding:7px 15px;
+ cursor: pointer;
+}
+
+#gallery .container .pagination .prev.disabled,#gallery .container .pagination .next.disabled{
+	border-color: gray;
+	color:gray;
+	pointer-events: none;
+}
+footer{
+    display: flex;
+    background-color: #1D1D1F;
+    justify-content: center;
+    align-items: center;
+
+
+
+    
+
+    
+}
+footer p{
+
+    color: #3bb1ff;
+    margin: 10px;
+    
+
+}
+
+
+
+
+.whats-app {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    transition: all 5s ease-in-out;
+    top: 40px;
+    left: 15px;
+    /* background-color: #25d366; */
+    color: #FFF;
+    /* border-radius: 50px; */
+    text-align: center;
+    font-size: 30px;
+    /* box-shadow: 2px 2px 3px #999; */
+    z-index: 100;
+}
+
+.my-float {
+    margin-top: 16px;
+}
+
+
+.whats-app :hover {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+  
+  @keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
+
+
+
+
+
+
+  /* ----------------------------------------------------------------------------- */
+
+
+
+
+  /* ////////////////////////////////////////////////////////////////////////// */
+
+
+  .android-app {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    transition: all 5s ease-in-out;
+    top: 100px;
+    left: 10px;
+    /* background-color: #25d366; */
+    color: #FFF;
+    /* border-radius: 50px; */
+    text-align: center;
+    font-size: 30px;
+    /* box-shadow: 2px 2px 3px #999; */
+    z-index: 100;
+}
+
+.my-float {
+    margin-top: 16px;
+}
+
+
+.android-app :hover {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+  
+  @keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
+
+
+  /* ////////////////////////////////////////////////////////////////////////// */
+  #student { 
+    background-image: url('../img/backgraund.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+
+}
+
+#student .container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#student .container .box{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 50px;
+    
+}
+#student .container .box .imgbx{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    transition: 0.5s ease-in-out;
+
+}
+#student .container .box:hover .imgbx{
+
+
+    transform: translate(-35px,-35px);
+}
+#student .container .box .imgbx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+#student .container .box .content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 15px;
+    transition: 0.5s ease-in-out;
+
+}
+#student .container .box:hover .content{
+    transform: translate(35px,35px);
+}
+#student .container .box .content h2{
+    font-size: 20px;
+    color: #111;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+#student .container .box .content h2 span{
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 2px;
+
+}
+@media (max-width:768px)
+{
+    #student .container .box:hover .content
+    {
+        transform: translate(0,35px);
+    }
+
+    #student .container .box:hover .imgbx
+    {
+        transform: translate(0,-35px);
+    }
+}
+
+
+
+
+
+
+
+
+
+  /* ----------------------------------------------------------------------------- */
+
+
+/* ++++++++++++++++++++video++++++++++++ */
+#video .iframe-container{
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+#video .iframe-container iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* ++++++++++++++++++++video++++++++++++ */
+
+
+  
+  /* ********************Button*************************** */
+#button {
+    background-image: url('../img/black.jpg');
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+
+
+
+}
+#button .lightStatus{
+    
+    margin-top: 0px;
+    
+
+
+    color: white;
+    font-family: Verdana;
+    
+}
+#button a.lightButton{
+    position: relative;
+    margin-top: 50px;
+    display: inline-block;
+    padding: 10px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.4);
+    background: #262c37;
+    letter-spacing: 2px;
+    font-size: 16px;
+    transition: 0.5%;
+    
+    
+}
+#button a.lightButton:hover{
+    color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+}
+
+#button a.lightButton span{
+    display: block;
+    position: absolute;
+    background: #2894ff;
+
+}
+
+
+#button a.lightButton span:nth-child(1)
+{
+    left:0;
+    bottom: 0;
+    width: 1px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+}
+#button a.lightButton:hover span:nth-child(1)
+{
+
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+}
+#button a.lightButton span:nth-child(2)
+{
+    left:0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+    
+}
+#button a.lightButton:hover span:nth-child(2)
+{
+
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+#button a.lightButton span:nth-child(3)
+{
+    right:0;
+    bottom: 0;
+    width: 1px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+}
+#button a.lightButton:hover span:nth-child(3)
+{
+
+    transform: scaleY(1);
+    transform-origin: left;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+}
+#button a.lightButton span:nth-child(4)
+{
+    left:0;
+    top: 0;
+    width: 100%;
+    height: 1px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+  
+}
+#button a.lightButton:hover span:nth-child(4)
+{
+
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+}
+
+
+
+    /* ********************Button*************************** */
+
+    
+    
+
+    
