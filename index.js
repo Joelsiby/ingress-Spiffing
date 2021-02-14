@@ -1,5 +1,5 @@
 
-
+// codes to change the images in the components section
 
 let slide = document.querySelectorAll('#imgShift .slide');
 var current = 0;
@@ -57,7 +57,7 @@ function start(){
 start();
 // ---------------------------------------------------------------------------------------------
 
-
+// codes which is used to add only 3 images for the steps used and add a slider
  
 const galleryItems=document.querySelector("#gallery .container").children;
 const prev2=document.querySelector("#gallery .prev");

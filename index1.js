@@ -15,6 +15,7 @@
     measurementId: "G-PKS30090RV"
   };
   // Initialize Firebase
+  // above snipets are provided by firebase so as to link my web app to firebase and the product
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
   
