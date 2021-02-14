@@ -1,4 +1,6 @@
+// codes to control the esp8266 12E module (wifi module)
 #include <FirebaseArduino.h>
+
 #include <ESP8266WiFi.h>
 
 #define WIFI_SSID "joel"
